@@ -12,18 +12,18 @@ $(function (){
 	    var quoteText = $(data.content).text().trim();
 	    var quoteAuthor = data.title;
 
-	    if (!input.quoteAuthor.lenght) {
-			input.quoteAuthor = "Unknown Author";
+	    if (!quoteAuthor.lenght) {
+			quoteAuthor = "Unknown Author";
 		}
 
-		var tweetText = "Quote of the day - " + input.quoteText + " Author: " + input.quoteAuthor;
+		var tweetText = "Quote of the day - " + quoteText + " Author: " + quoteAuthor;
 
 		if (tweetText.lenght > 140) {
 			getQuote();
 		} else {
 			var tweet = tweetLink + encodeURIComponent(tweetText);
-			$('.quote').text(input.quoteText);
-			$('.author').text("Author: " + input.quoteAuthor);
+			$('.quote').text(quoteText);
+			$('.author').text("Author: " + quoteAuthor);
 			$('.tweet').attr('href', tweet);
 		}
 	}
