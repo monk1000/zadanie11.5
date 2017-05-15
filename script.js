@@ -7,12 +7,7 @@ $(function() {
 		$.getJSON(quoteUrl, createTweet); 
 	}
 
-	function createTweet(input) {
-    var data = input[0];
-
-    var quoteText = $(data.content).text().trim();
-    var quoteAuthor = data.title;
-		
+	function createTweet(input) { 
 		if (!input.quoteAuthor.length) {
 			input.quoteAuthor = "Unknown"; 
 		}
@@ -33,6 +28,7 @@ $(function() {
 	$('.trigger').click(function() {
 			getQuote();
 	})
+
 
 });
 
