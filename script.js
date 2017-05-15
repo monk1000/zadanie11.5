@@ -9,7 +9,7 @@ $(function() {
 
 	function createTweet(input) { 
 		if (!input.quoteAuthor.length) {
-			input.quoteAuthor = "Unknown"; 
+			input.quoteAuthor = "Unknown author"; 
 		}
 
 		var tweetText = "Quote of the day: " + input.quoteText + " Author: " + input.quoteAuthor;
